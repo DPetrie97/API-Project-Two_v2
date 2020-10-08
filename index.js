@@ -54,8 +54,8 @@ function fetchResultsGame(e) {
             headerTag.textContent = gamer.title;
             console.log("Title:", gamer);
 
-            if(gamer.image.length > 0) {
-                gameCover.src = gamer.image;
+            if(gamer.result.image.length > 0) {
+                gameCover.src = gamer.result.image;
                 gameCover.alt = "Game Cover";
             }
 
@@ -64,7 +64,9 @@ function fetchResultsGame(e) {
             for(let i = 0; i < 1; i++) {
                 let gameSpan = document.createElement("span")
                 gameSpan.setAttribute("class", "gameDetails"); 
-                gameSpan.textContent += gamer.results.title;
+                gameSpan.textContent += gamer.result.title+": ";
+                gameSpan.textContent += gamer.result.description+" Score: ";
+                gameSpan.textContent += gamer.result.score;
                 gamePara.appendChild(gameSpan);
             }
             gameClearFix.setAttribute("class", "gameClearFix");

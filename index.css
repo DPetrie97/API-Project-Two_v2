@@ -13,3 +13,10 @@ body{
 .entryHero{
     font-style: italic;
 }
+
+#gameCover{
+    display: flex;
+    justify-content: center;
+    width: 15em;
+    height: 20em;
+}
